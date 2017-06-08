@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//Belajar Model
 Route::get('/testmodel',function(){
 	$q=App\Blog::all();
 	return $q;
@@ -38,3 +39,15 @@ Route::get('/testpengaturan',function(){
 	$q=App\Pengaturan::all();
 	return $q;
 });
+
+//controller digunakan sebagai pengatur alur program
+//Latihan Controller
+Route::get('test','PrakerinController@percobaan');
+Route::get('test2','PrakerinController@percobaan2');
+Route::get('test3','PrakerinController@percobaan3');
+Route::get('test4','PrakerinController@percobaan4');
+Route::get('test5','PrakerinController@percobaan5');
+
+//Parameter
+Route::get('halaman/{id}','PrakerinController@param');
+Route::get('/{a}','PrakerinController@parameter');
