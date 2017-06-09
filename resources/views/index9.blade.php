@@ -6,8 +6,8 @@
 <body>
 <center>
 
-<h1>Daftar Nama :</h1>
-@foreach ($data as $datas)
+<h1>Daftar Nama Merk Laptop:</h1>
+@foreach ($c as $datas)
 <li> {{$datas}} </li>
 @endforeach
 

@@ -6,9 +6,8 @@
 <body>
 <center>
 
-<h1>Daftar Nama :</h1>
-@foreach ($data as $datas)
-<li> {{$datas}} </li>
+@foreach ($ahaha as $a)
+<li> {{$a}} </li>
 @endforeach
 
 </center>
