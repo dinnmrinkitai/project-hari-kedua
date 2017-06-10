@@ -20,10 +20,11 @@ class CobaController extends Controller
     	return $a;
     }
 
-    Public Function test3()
+    Public Function test3($id)
     {
-    	$tampilan = Coba::all();
-    	return view('index6', compact('tampilan'));
+    	$tampilan = Coba::find($id);
+        return $tampilan;
+    	//return view('index6', compact('tampilan'));
     }
 
      Public Function percobaan6()
@@ -45,6 +46,12 @@ class CobaController extends Controller
     	'laptop' => ['Asus','Acer','HP','Samsung','Aple']];
     	$ahaha = $data[$a];
     	return view('index7', compact('ahaha'));
+    }
+
+    Public Function test4($id)
+    {
+        $tampilan = Coba::where('jurusan','like',$id)-> Orwhere('nama','like',$id)->get();
+        return $tampilan;
     }
 
 }
